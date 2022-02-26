@@ -2,7 +2,7 @@ import s from './MyPosts.module.css'
 import Post from './Post/Post'
 
 const MyPosts = (props) => {
-    let MyPostsDataElements = props.MyPostsData.map(post => <Post message={post.message} likesCount={post.likesCount}/> )
+    let MyPostsDataElements = props.state.MyPostsData.map(post => <Post message={post.message} likesCount={post.likesCount}/> )
     return (
         <div className={s.postsBlock}>
             <h3>My posts</h3>
