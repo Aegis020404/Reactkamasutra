@@ -1,3 +1,6 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+
 // store - OOP
 let store = {
     _state: {
@@ -54,6 +57,14 @@ let store = {
         }
     }
 }
+
+export const addPostActionCreator = () => ({
+    type: ADD_POST
+})
+
+export const updateNewPostTextActionCreator = (newText) => ({
+    type: UPDATE_NEW_POST_TEXT, text: newText
+})
 
 export default store;
 window.store = store;
