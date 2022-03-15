@@ -10,8 +10,8 @@ let initialState = {
 }
 
 const profileReducer = (state = initialState, action) => {
-    let stateCopy = {...state};
-    stateCopy.MyPostsData = [...state.MyPostsData];
+    let stateCopy = {...state, MyPostsData: [...state.MyPostsData] };
+
     switch (action.type) {
         case ADD_POST: {
             let newPost = {

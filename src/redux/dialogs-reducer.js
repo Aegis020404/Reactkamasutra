@@ -32,7 +32,7 @@ const dialogsReducer  = (state = initialState, action) => {
             stateCopy.messages.push({id: 6, message: body});
             return stateCopy;
         default:
-            return state;
+            return stateCopy;
     }
 }
 export const sendMessageCreator = () => ({
