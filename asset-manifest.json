@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/Reactkamasutra/static/css/main.7cdd8159.css",
-    "main.js": "/Reactkamasutra/static/js/main.e8d8a0cb.js",
+    "main.css": "/Reactkamasutra/static/css/main.a4c84554.css",
+    "main.js": "/Reactkamasutra/static/js/main.797106e9.js",
     "static/media/user.png": "/Reactkamasutra/static/media/user.4583aa6f6eb627141914.png",
+    "static/media/spinner.svg": "/Reactkamasutra/static/media/spinner.8ad5e0369e91923149d7444378114a6d.svg",
     "index.html": "/Reactkamasutra/index.html",
-    "main.7cdd8159.css.map": "/Reactkamasutra/static/css/main.7cdd8159.css.map",
-    "main.e8d8a0cb.js.map": "/Reactkamasutra/static/js/main.e8d8a0cb.js.map"
+    "main.a4c84554.css.map": "/Reactkamasutra/static/css/main.a4c84554.css.map",
+    "main.797106e9.js.map": "/Reactkamasutra/static/js/main.797106e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cdd8159.css",
-    "static/js/main.e8d8a0cb.js"
+    "static/css/main.a4c84554.css",
+    "static/js/main.797106e9.js"
   ]
 }
