@@ -1,8 +1,30 @@
+.listUsers {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*align-items: stretch;*/
+    align-content:space-between;
+}
+
 .usersPhoto {
     width: 150px;
     height: 150px;
     border-radius: 50%;
 }
-.selectedPage{
-    font-weight: bold;
+
+.selectedPage {
+    color: #998700;
+}
+
+.wrapPage {
+    display: flex;
+}
+
+.page {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.page:hover {
+    font-weight: 600;
 }

@@ -6,7 +6,7 @@
     width: 80%;
     margin-top: 20px;
     grid-template-areas:
-  "h h"
+  "n c"
   "n c";
     grid-template-rows: 60px 1fr;
     grid-template-columns: 1fr 5fr;
@@ -14,9 +14,12 @@
 }
 
 .app-wrapper-content {
+    /*overflow: auto;*/
+    max-width: 100%;
+    border-bottom-right-radius: 10%;
     box-sizing: border-box;
     grid-area: c;
-    background-color: #db99ff;
+    background-color: #FFFFFF;
 }
 
 

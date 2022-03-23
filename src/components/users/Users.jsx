@@ -3,18 +3,20 @@ import s from "./users.module.css";
 import userPhoto from "../../assets/images/user.png";
 
 const Users = (props) => {
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
+    let pagesCount = 20//Math.ceil(props.totalUsersCount / props.pageSize)
     let pages = []
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
     return (
         <div>
-                <div>
-                    {pages.map(p =>
-                        <span onClick={() => props.onPageChanged(p)} key={p} id={p} className={props.currentPage === p ? s.selectedPage : ''}>{p}</span>
-                    )}
-                </div>
+            <div className={s.wrapPage}>
+                {pages.map(p =>
+                    <span onClick={() => props.onPageChanged(p)} key={p} id={p}
+                          className={props.currentPage === p ? s.selectedPage + ' ' + s.page : s.page}>{p}</span>
+                )}
+            </div>
+            <div className={s.listUsers}>
                 {
                     props.users.map(u =>
                         <div key={u.id}>
@@ -50,6 +52,7 @@ const Users = (props) => {
                         </div>)
                 }
             </div>
+        </div>
     );
 };
 

@@ -1,6 +1,6 @@
 .nav {
     grid-area: n;
-    background-color: #FF1300;
+    background-color: #FFFFFF;
     padding: 10px;
 }
 
@@ -9,9 +9,16 @@
 }
 
 .active {
-    color: gold;
+    color: #998700;
 }
 
 .item {
-    color: white;
+    text-align: center;
+    color: black;
+}
+
+.item:hover {
+    color:#998700;
+    transition: color .1s;
+
 }
