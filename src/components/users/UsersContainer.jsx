@@ -1,16 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux/lib'
 import {
-    followAC,
-    setCurrentPageAC,
-    setUsersAC,
-    unFollowAC,
-    setTotalUsersCountAC,
-    toggleIsFetchingAC
+    follow,
+    setCurrentPage,
+    setUsers,
+    unFollow,
+    setTotalUsersCount,
+    toggleIsFetching
 } from "../../redux/users-reducer";
 import * as axios from "axios";
 import Users from "./Users";
-import preloader from './../../assets/images/spinner.svg'
+import Preloader from "../common/Preloader/Preloader";
 class UsersContainer extends React.Component {
     componentDidMount() {
         this.props.toggleIsFetching(true)
@@ -34,7 +34,7 @@ class UsersContainer extends React.Component {
     render() {
 
         return <>
-            {this.props.isFetching ? <div > <img src={preloader} alt="preloader" /> </div> : null}
+            {this.props.isFetching ? <Preloader/>: null}
             <Users
                 totalUsersCount={this.props.totalUsersCount}
                 pageSize={this.props.pageSize}
@@ -57,14 +57,16 @@ let mapStateToProps = state => ({
     currentPage: state.usersPage.currentPage,
     isFetching: state.usersPage.isFetching,
 })
-let mapDispatchToProps = dispatch => ({
-    follow: userId => dispatch(followAC(userId)),
-    unFollow: userId => dispatch(unFollowAC(userId)),
-    setUsers: users => dispatch(setUsersAC(users)),
-    setCurrentPage: page => dispatch(setCurrentPageAC(page)),
-    setTotalUsersCount: count => dispatch(setTotalUsersCountAC(count)),
-    toggleIsFetching: isFetching => dispatch(toggleIsFetchingAC(isFetching))
+// let mapDispatchToProps = dispatch => ({
+//     follow: userId => dispatch(followAC(userId)),
+//     unFollow: userId => dispatch(unFollowAC(userId)),
+//     setUsers: users => dispatch(setUsersAC(users)),
+//     setCurrentPage: page => dispatch(setCurrentPageAC(page)),
+//     setTotalUsersCount: count => dispatch(setTotalUsersCountAC(count)),
+//     toggleIsFetching: isFetching => dispatch(toggleIsFetchingAC(isFetching))
+// })
 
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+export default connect(
+    mapStateToProps,
+    {follow, unFollow, setUsers, setCurrentPage, setTotalUsersCount, toggleIsFetching}
+)(UsersContainer);
