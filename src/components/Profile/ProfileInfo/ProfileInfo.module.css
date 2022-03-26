@@ -4,3 +4,8 @@ border-radius:50%;
 .descriptionBlock {
     margin: 10px;
 }
+.usersPhoto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}

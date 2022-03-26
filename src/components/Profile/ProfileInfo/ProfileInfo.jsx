@@ -1,13 +1,14 @@
 import s from './ProfileInfo.module.css'
+import Preloader from "../../common/Preloader/Preloader";
+import userPhoto from "../../../assets/images/user.png";
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+    if (!props.profile) return  <Preloader/>
+
     return (
         <div>
-            <div>
-                <img className={s.content_img}
-                     src='https://sun9-45.userapi.com/impf/QlIxdY6plAFziDpVDQgRhNd5mj1m3mZq-Lu_Ig/hqAi_P0qs00.jpg?size=595x807&quality=96&sign=60f58860c2b45b024461502bb5edbcc5&type=album' width='200' height='200' alt='background'/>
-            </div>
             <div className={s.descriptionBlock}>
+                <img className={s.usersPhoto} src={props.profile.photos.large || userPhoto } alt="аватарка"/>
                 ava + description
             </div>
         </div>
