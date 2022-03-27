@@ -6,7 +6,7 @@
     width: 80%;
     margin-top: 20px;
     grid-template-areas:
-  "n c"
+  "h h"
   "n c";
     grid-template-rows: 60px 1fr;
     grid-template-columns: 1fr 5fr;
