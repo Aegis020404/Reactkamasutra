@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Reactkamasutra/static/css/main.a4c84554.css",
-    "main.js": "/Reactkamasutra/static/js/main.797106e9.js",
+    "main.css": "/Reactkamasutra/static/css/main.8f9e4a9d.css",
+    "main.js": "/Reactkamasutra/static/js/main.5affd583.js",
     "static/media/user.png": "/Reactkamasutra/static/media/user.4583aa6f6eb627141914.png",
-    "static/media/spinner.svg": "/Reactkamasutra/static/media/spinner.8ad5e0369e91923149d7444378114a6d.svg",
+    "static/media/spinner.svg": "/Reactkamasutra/static/media/spinner.ee966523a4da9c77a011a0dde721cad9.svg",
     "index.html": "/Reactkamasutra/index.html",
-    "main.a4c84554.css.map": "/Reactkamasutra/static/css/main.a4c84554.css.map",
-    "main.797106e9.js.map": "/Reactkamasutra/static/js/main.797106e9.js.map"
+    "main.8f9e4a9d.css.map": "/Reactkamasutra/static/css/main.8f9e4a9d.css.map",
+    "main.5affd583.js.map": "/Reactkamasutra/static/js/main.5affd583.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4c84554.css",
-    "static/js/main.797106e9.js"
+    "static/css/main.8f9e4a9d.css",
+    "static/js/main.5affd583.js"
   ]
 }
