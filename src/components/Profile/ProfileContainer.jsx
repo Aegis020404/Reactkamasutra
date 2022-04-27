@@ -7,8 +7,8 @@ import { useParams } from 'react-router-dom';
 class ProfileContainer extends Component {
     componentDidMount() {
     let userId = this.props.params.userId;
-    console.log(userId)
     if(!userId) userId = 2
+        console.log(userId)
         axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`,).then(res => {
             this.props.setUserProfile(res.data)
         })
@@ -22,7 +22,8 @@ class ProfileContainer extends Component {
 }
 
 let mapStateToProps = (state) => ({
-    profile: state.profilePage.profile
+    profile: state.profilePage.profile,
+    auth: state.auth
 })
 
 const ProfileURLMatch = (props) => {

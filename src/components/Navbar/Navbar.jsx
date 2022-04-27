@@ -1,11 +1,12 @@
 import s from './Navbar.module.css'
 import {NavLink} from "react-router-dom";
+import {connect} from "react-redux/lib";
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <nav className={s.nav}>
             <div className={s.item}>
-                <NavLink to='/profile/2' className={navData => navData.isActive ? s.active : s.item}>Profile</NavLink>
+                <NavLink to={`/profile/${props.auth.userId}`} className={navData => navData.isActive ? s.active : s.item}>Profile</NavLink>
             </div>
             <div className={s.item}>
                 <NavLink to='/dialogs' className={navData => navData.isActive ? s.active : s.item}>Messages</NavLink>
@@ -26,5 +27,5 @@ const Navbar = () => {
         </nav>
     )
 }
-
-export default Navbar
+const NavbarContainer = connect((state)=>({auth:state.auth}), {})(Navbar)
+export default NavbarContainer
